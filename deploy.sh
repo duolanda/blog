@@ -2,7 +2,7 @@
 set -e
 # 生成静态文件
 export NODE_OPTIONS=--openssl-legacy-provider
-yarn build
+pnpm build
 # 进入生成的文件夹，这里是默认的路径，可以自定义
 cd .vuepress/dist
 # 如果是发布到自定义域名
