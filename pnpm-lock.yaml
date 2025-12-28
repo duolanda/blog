@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  vue: 2.7.16
+  vue-server-renderer: 2.7.16
+  vue-template-compiler: 2.7.16
+
 importers:
 
   .:
@@ -895,7 +900,7 @@ packages:
     peerDependencies:
       '@babel/core': '*'
       core-js: ^3
-      vue: ^2 || ^3.0.0-0
+      vue: 2.7.16
     peerDependenciesMeta:
       core-js:
         optional: true
@@ -906,7 +911,7 @@ packages:
     resolution: {integrity: sha512-QmfRpssBOPZWL5xw7fOuHNifCQcNQC1PrOo/4fu6xlhlKJJKSA3HqX92Nvgyx8fqHZTUGMPHmFA+IDqwXlqkSA==}
     peerDependencies:
       '@babel/core': ^7.0.0-0
-      vue: '*'
+      vue: 2.7.16
     peerDependenciesMeta:
       vue:
         optional: true
@@ -962,12 +967,12 @@ packages:
   '@vue/composition-api@1.0.0-beta.21':
     resolution: {integrity: sha512-tgbvDpLvKQ1GrII424wsoyzPCsG0oTFf38emMq495SfLY7RmUqhVIl81pvnC5489PPrCxDkbauJHJrhlcXfbTQ==}
     peerDependencies:
-      vue: '>= 2.5 < 3'
+      vue: 2.7.16
 
   '@vue/composition-api@1.7.2':
     resolution: {integrity: sha512-M8jm9J/laYrYT02665HkZ5l2fWTK4dcVg3BsDHm/pfz+MjDYwX+9FUaZyGwEyXEDonQYRCo0H7aLgdklcIELjw==}
     peerDependencies:
-      vue: '>= 2.5 < 2.7'
+      vue: 2.7.16
 
   '@vue/shared@3.5.26':
     resolution: {integrity: sha512-7Z6/y3uFI5PRoKeorTOSXKcDj0MSasfNNltcslbFrPpcw6aXRUALq4IfJlaTRspiWIUOEZbrpM+iQGmCOiWe4A==}
@@ -5283,7 +5288,7 @@ packages:
   vue-class-component@7.2.6:
     resolution: {integrity: sha512-+eaQXVrAm/LldalI272PpDe3+i4mPis0ORiMYxF6Ae4hyuCh15W8Idet7wPUEs4N4YptgFHGys4UrgNQOMyO6w==}
     peerDependencies:
-      vue: ^2.0.0
+      vue: 2.7.16
 
   vue-click-outside@1.1.0:
     resolution: {integrity: sha512-pNyvAA9mRXJwPHlHJyjMb4IONSc7khS5lxGcMyE2EIKgNMAO279PWM9Hyq0d5J4FkiSRdmFLwnbjDd5UtPizHQ==}
@@ -5292,7 +5297,7 @@ packages:
     resolution: {integrity: sha512-m/cm/Jo+USFx4JNGvhXVuAAbeB+Dejc0O8hzarph9MMuxxcMEDxf+0UBzg79g15YwYGIToX957XvzG0xSufG9A==}
     hasBin: true
     peerDependencies:
-      vue: ^2.6.0 || >=3.0.0-rc.1
+      vue: 2.7.16
 
   vue-disqus@3.0.5:
     resolution: {integrity: sha512-T3Y68lXf5W2lYt6j4Y3kZ4opLPH0EAzqriy11MS4D4Q2+UN0tFuUXeYP1MxfvdyaCEboXSM6CUswxsULuNV70Q==}
@@ -5304,7 +5309,7 @@ packages:
     resolution: {integrity: sha512-C5GZjs1tYlAqjwymaaCPDjCyGo10ajUphiwA922jKt9n7KPpqR7oM1PCwYzhB/E7+nT3wfdG3oRre5raIT1rKA==}
     deprecated: Vue I18n v8.x has reached EOL and is no longer actively maintained. About maintenance status, see https://vue-i18n.intlify.dev/guide/maintenance.html
     peerDependencies:
-      vue: ^2
+      vue: 2.7.16
 
   vue-loader@15.11.1:
     resolution: {integrity: sha512-0iw4VchYLePqJfJu9s62ACWUXeSqM30SQqlIftbYWM3C+jpPcEHKSPUZBLjSF9au4HTHQ/naF6OGnO3Q/qGR3Q==}
@@ -5328,18 +5333,18 @@ packages:
   vue-property-decorator@8.5.1:
     resolution: {integrity: sha512-O6OUN2OMsYTGPvgFtXeBU3jPnX5ffQ9V4I1WfxFQ6dqz6cOUbR3Usou7kgFpfiXDvV7dJQSFcJ5yUPgOtPPm1Q==}
     peerDependencies:
-      vue: '*'
+      vue: 2.7.16
 
   vue-property-decorator@9.1.2:
     resolution: {integrity: sha512-xYA8MkZynPBGd/w5QFJ2d/NM0z/YeegMqYTphy7NJQXbZcuU6FC6AOdUAcy4SXP+YnkerC6AfH+ldg7PDk9ESQ==}
     peerDependencies:
-      vue: '*'
+      vue: 2.7.16
       vue-class-component: '*'
 
   vue-router@3.6.5:
     resolution: {integrity: sha512-VYXZQLtjuvKxxcshuRAwjHnciqZVoXAjTjcqBTz4rKc8qih9g9pI3hbDjmqXaHdgL3v8pV6P8Z335XvHzESxLQ==}
     peerDependencies:
-      vue: ^2
+      vue: 2.7.16
 
   vue-server-renderer@2.7.16:
     resolution: {integrity: sha512-U7GgR4rYmHmbs3Z2gqsasfk7JNuTsy/xrR5EMMGRLkjN8+ryDlqQq6Uu3DcmbCATAei814YOxyl0eq2HNqgXyQ==}

@@ -20,5 +20,20 @@
     "markdown-it-katex": "^2.0.3",
     "moment": "^2.29.1",
     "openssl": "^2.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "vue": "2.7.16",
+      "vue-server-renderer": "2.7.16",
+      "vue-template-compiler": "2.7.16"
+    },
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "core-js",
+      "esbuild",
+      "highlight.js",
+      "vue-demi",
+      "vuepress"
+    ]
   }
 }
