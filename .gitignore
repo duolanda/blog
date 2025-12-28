@@ -1,0 +1,5 @@
+node_modules/
+yarn.lock
+yarn.error
+.vuepress/dist/
+.DS_Store
