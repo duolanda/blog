@@ -146,12 +146,17 @@ module.exports = {
             buttonText: "刷新"
         }
     }],
-    ['@vuepress/last-updated', {
-          dateOptions:{
-            hour12: false
-          }
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          const moment = require('moment')
+          moment.locale(lang)
+          // 转换为 UTC+8 (北京时间)
+          return moment.utc(timestamp).add(8, 'hours').format('YYYY/M/D HH:mm:ss')
         }
-      ],
+      }
+    ],
   ],
   "locales": {
         // 键名是该语言所属的子路径，作为特例，默认语言可以使用 '/' 作为其路径。
