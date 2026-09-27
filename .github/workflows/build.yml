@@ -1,0 +1,55 @@
+name: Build static site
+
+# 在 CI 里构建 VuePress 产物，并发布到 gh-pages 分支。
+# 自建服务器只需要从 gh-pages 拉现成的静态文件，不必在服务器上跑 pnpm install / build。
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # @vuepress/last-updated 依赖完整 git 历史来取文件修改时间，不能浅克隆
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm run build
+        env:
+          # vuepress 1.x 基于 webpack 4，Node 17+ 的 OpenSSL 3 会让 md4 hash 报 ERR_OSSL_EVP_UNSUPPORTED
+          NODE_OPTIONS: --openssl-legacy-provider
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.vuepress/dist
+          publish_branch: gh-pages
+          # 每次只保留一个提交，服务器端克隆/拉取更快
+          force_orphan: true
