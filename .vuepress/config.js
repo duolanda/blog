@@ -104,10 +104,14 @@ module.exports = {
         "link": "https://vuepress-theme-reco.recoluan.com"
       }
     ],
+    // 评论已关闭（2026-09-27）：不再加载 Valine / LeanCloud，同时关闭访问数上报。
+    // 注意：不能直接删掉 valineConfig —— reco 主题里
+    //   const { showComment } = $themeConfig.valineConfig || { showComment: true }
+    // 删掉后 showComment 会回落到 true，仍会渲染一个连不上的评论框。
     "valineConfig": {
-        appId: 'PjQUaOjdyrWau6sTc6Y5vTco-gzGzoHsz',
-        appKey: 'dqhdMi9i1Jk1xAMIMXErbgGy', 
-      },
+      "showComment": false,
+      "visitor": false,
+    },
     // "logo": "/logo.png",
     "search": true,
     "searchMaxSuggestions": 10,
